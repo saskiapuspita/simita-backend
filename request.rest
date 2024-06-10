@@ -1,0 +1,23 @@
+GET http://localhost:4000/users
+Authorization: Bearer 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWUiOiJTYXNraWEgMiIsImVtYWlsIjoic2Fza2lhMkBnbWFpbC5jb20iLCJpYXQiOjE3MTQ5NzU4NjIsImV4cCI6MTcxNDk3NTg4Mn0.f7IO0QuDVHT7sXsxTcU1bsSqL5eLqYjF1gYwFoEs-6A
+
+###
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+    "name": "Saskia 2",
+    "email": "saskia2@gmail.com",
+    "password": "123456",
+    "confPassword": "123456"
+}
+
+###
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "email": "saskia2@gmail.com",
+    "password": "123456"
+}
