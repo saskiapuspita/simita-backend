@@ -18,7 +18,7 @@ module.exports = class User {
   }
 
   static fetchAll() {
-    return db.execute("SELECT * FROM users");
+    return db.execute("SELECT * FROM users WHERE role = 'dosen'");
   }
 
   static save(user) {

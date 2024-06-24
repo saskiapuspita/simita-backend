@@ -99,12 +99,7 @@ exports.updateMataKuliah = async (req, res, next) => {
   const sks = req.body.sks;
   const minat = req.body.minat;
   const user = req.body.user;
-  console.log("nama: " + req.body.nama);
-  console.log("sks: " + req.body.sks);
-  console.log("minat: " + req.body.minat);
-  console.log("user: " + req.body.user);
-  console.log("id parameter: " + req.params.id);
-
+  
   try {
     const mataKuliah = {
       nama: nama,

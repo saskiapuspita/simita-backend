@@ -13,10 +13,7 @@ router.get("/", auth, userController.fetchAll);
 
 router.get("/:id", auth, userController.fetchById);
 
-router.post(
-  "/", auth,
-  userController.postUser
-);
+router.post("/", auth, userController.postUser);
 
 router.delete("/:id", auth, userController.deleteUser);
 

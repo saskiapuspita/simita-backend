@@ -31,8 +31,9 @@ module.exports = class User {
     this.password = password;
   }
 
-  static find(nim) {
-    return db.execute("SELECT * FROM users WHERE nim = ?", [nim]);
+  static find(email) {
+    // return db.execute("SELECT * FROM users WHERE nim = ? OR nidn = ?", [nim, nidn]);
+    return db.execute("SELECT * FROM users WHERE email = ?", [email]);
   }
 
   static fetchById(idUser) {
@@ -40,7 +41,7 @@ module.exports = class User {
   }
 
   static fetchAll() {
-    return db.execute("SELECT * FROM users");
+    return db.execute("SELECT * FROM users WHERE role = 'mahasiswa'");
   }
 
   static save(user) {

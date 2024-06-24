@@ -11,7 +11,9 @@ const nilaiPeminatanMahasiswaRoutes = require('./routes/nilaipeminatanmahasiswa'
 const middlewarePeminatanMahasiswaRoutes = require('./routes/middlewarepeminatanmahasiswa');
 const middlewareNilaiPeminatanMahasiswaRoutes = require('./routes/middlewarenilaipeminatanmahasiswa');
 const middlewareMataKuliahRoutes = require('./routes/middlewarematakuliah');
+const rekapitulasiPeminatanRoutes = require('./routes/rekapitulasipeminatan');
 const userRoutes = require('./routes/user');
+const dosenRoutes = require('./routes/dosen');
 const errorController = require('./controllers/error');
 const app = express();
 
@@ -36,7 +38,9 @@ app.use('/nilaiPeminatanMahasiswa', nilaiPeminatanMahasiswaRoutes);
 app.use('/middlewarepeminatanmahasiswa', middlewarePeminatanMahasiswaRoutes);
 app.use('/middlewarenilaipeminatanmahasiswa', middlewareNilaiPeminatanMahasiswaRoutes);
 app.use('/middlewarematakuliah', middlewareMataKuliahRoutes);
+app.use('/rekapitulasipeminatan', rekapitulasiPeminatanRoutes);
 app.use('/user', userRoutes);
+app.use('/dosen', dosenRoutes);
 
 app.use(errorController.get404);
 app.use(errorController.get500);

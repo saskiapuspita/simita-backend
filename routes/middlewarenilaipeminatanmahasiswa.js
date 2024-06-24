@@ -8,6 +8,6 @@ const auth = require('../middleware/auth');
 
 const router = express.Router();
 
-router.get('/', auth, nilaiPeminatanMahasiswaController.fetchNamaPeminatanDanNamaMatkul);
+router.get('/:id', auth, nilaiPeminatanMahasiswaController.fetchDataTableNilaiPeminatanMahasiswa);
 
 module.exports = router;

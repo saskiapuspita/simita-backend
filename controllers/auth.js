@@ -47,11 +47,20 @@ exports.signup = async (req, res, next) => {
 };
 
 exports.login = async (req, res, next) => {
-  // const email = req.body.email;
+  
+  if (req.body.nim == null) {
+    req.body.nim = null
+  } else if (req.body.nidn == null) {
+    req.body.nidn = null
+  }
+
+  const email = req.body.email;
   const nim = req.body.nim;
+  const nidn = req.body.nidn;
   const password = req.body.password;
+  
   try {
-    const user = await User.find(nim);
+    const user = await User.find(email);
 
     if (user[0].length !== 1) {
       const error = new Error("A user with this nim could not be found.");
