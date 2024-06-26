@@ -12,6 +12,8 @@ const middlewarePeminatanMahasiswaRoutes = require('./routes/middlewarepeminatan
 const middlewareNilaiPeminatanMahasiswaRoutes = require('./routes/middlewarenilaipeminatanmahasiswa');
 const middlewareMataKuliahRoutes = require('./routes/middlewarematakuliah');
 const rekapitulasiPeminatanRoutes = require('./routes/rekapitulasipeminatan');
+const judulPenelitianMahasiswaRoutes = require('./routes/judulpenelitianmahasiswa');
+const middlewarePengajuanJudulPenelitianMahawsiswa = require('./routes/middlewarepengajuanjudulpeminatanmahasiswa');
 const userRoutes = require('./routes/user');
 const dosenRoutes = require('./routes/dosen');
 const errorController = require('./controllers/error');
@@ -39,6 +41,8 @@ app.use('/middlewarepeminatanmahasiswa', middlewarePeminatanMahasiswaRoutes);
 app.use('/middlewarenilaipeminatanmahasiswa', middlewareNilaiPeminatanMahasiswaRoutes);
 app.use('/middlewarematakuliah', middlewareMataKuliahRoutes);
 app.use('/rekapitulasipeminatan', rekapitulasiPeminatanRoutes);
+app.use('/judulpenelitianmahasiswa', judulPenelitianMahasiswaRoutes);
+app.use('/middlewarejudulpenelitianmahasiswa', middlewarePengajuanJudulPenelitianMahawsiswa);
 app.use('/user', userRoutes);
 app.use('/dosen', dosenRoutes);
 
